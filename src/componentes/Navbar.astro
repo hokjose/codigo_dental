@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+const { title = "Josstech Clínica Dental" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+
+  <body class="m-0 p-0">
+    <Header />
+
+    <!-- Aquí se muestra únicamente el contenido de cada página -->
+    <main class="w-full m-0 p-0">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>
